@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VATHOUSE | JS Editors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Image/logo.PNG">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Ubuntu&family=Fira+Code&display=swap"
+        rel="stylesheet"> -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.11.0/devicon.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <i class="fa fa-terminal" aria-hidden="true"></i>
+                <h1>Pagnavath JS</h1>
+            </a>
+        </div>
+        <a href="mailto:pagnavathcoding@gmail.com"><button>Contact</button></a>
+    </header>
+    <div class="editor">
+        <div class="title">
+            <div class="theme">
+                <p>Select Theme: </p>
+                <select id="select-theme">
+                    <option value="gob">Select Theme</option>
+                    <option value="ambiance">Ambiance</option>
+                    <option value="chaos">chaos</option>
+                    <option value="chrome">chrome</option>
+                    <!-- <option value="clouds.css">Clouds</option> -->
+                    <option value="clouds_midnight">Clouds Midnight</option>
+                    <option value="cobalt">Cobalt</option>
+                    <option value="crimson_editor">Crimson Editor</option>
+                    <option value="dawn">Dawn</option>
+                    <option value="dracula">Dracula</option>
+                    <option value="dreamweaver">Dreamweaver</option>
+                    <option value="eclipse">Eclipse</option>
+                    <option value="github">Github</option>
+                    <option value="gob">Gob</option>
+                    <option value="gruvbox">Gruvbox</option>
+                    <option value="idle_fingers">Idle Fingers</option>
+                    <option value="iplastic">Iplastic</option>
+                    <option value="katzenmilch">Katzenmilch</option>
+                    <option value="kr_theme">Kr Theme</option>
+                    <option value="kuroir">Kuroir</option>
+                    <option value="merbivore">Merbivore</option>
+                    <option value="merbivore_soft">Merbivore Soft</option>
+                    <option value="mono_industrial">Mono Industrial</option>
+                    <option value="monokai">Monokai</option>
+                    <option value="nord_dark">Nord Dark</option>
+                    <option value="one_dark">One Dark</option>
+                    <option value="pastel_on_dark">Pastel On Dark</option>
+                    <option value="solarized_dark">Solarized Dark</option>
+                    <option value="solarized_light">Solarized Light</option>
+                    <option value="sqlserver">Sqlserver</option>
+                    <option value="terminal">Terminal</option>
+                    <option value="textmate">TextMate</option>
+                    <option value="tomorrow">Tomorrow</option>
+                    <option value="tomorrow_night">Tomorrow Night</option>
+                    <option value="tomorrow_night_blue">Tomorrow Night Blue</option>
+                    <option value="tomorrow_night_bright">Tomorrow Night Bright</option>
+                    <option value="tomorrow_night_eighties">Tomorrow Night Eighties</option>
+                    <option value="twilight">Twilight</option>
+                    <option value="vibrant_ink">Vibrant Ink</option>
+                    <option value="xcode">Xcode</option>
+                </select>
+            </div>
+            <div class="time">
+                <img src="./Image/alarm.svg" />
+                <p id="time"></p>
+            </div>
+            <div class="runs">
+                <button id="runs">Run <img src="./Image/play.svg" height="20px" style="margin-left: 5px;" /></button>
+            </div>
+            <div class="font-size">
+                <p>Select Font Size: </p>
+                <select id="font-size">
+                    <option value="16">Select Font Size</option>
+                    <option value="10">10px</option>
+                    <option value="12">12px</option>
+                    <option value="14">14px</option>
+                    <option value="16">16px</option>
+                    <option value="18">18px</option>
+                    <option value="20">20px</option>
+                    <!-- <option value="22">22px</option>
+                    <option value="24">24px</option>
+                    <option value="26">26px</option>
+                    <option value="28">28px</option>
+                    <option value="30">30px</option>
+                    <option value="32">32px</option>
+                    <option value="34">34px</option>
+                    <option value="36">36px</option>
+                    <option value="38">38px</option>
+                    <option value="40">40px</option> -->
+                </select>
+            </div>
+        </div>
+        <div class="area">
+            <div class="code" id="code">
+
+            </div>
+            <div class="run">
+                <h1>Console : Output</h1>
+                <ul class="editor__console-logs"></ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright <i class="fa fa-copyright"></i> 2021 pagnavathjs | developed by Pagnavath. All rights reserved.</p>
+        <!-- <div class="social">
+            <a href="https://www.facebook.com/pagnavath.js.3"><i class="fa fa-facebook"></i></a>
+        </div> -->
+    </footer>
+    <script src="./src-min/ace.js"></script>
+    <script src="./src-min/mode-javascript.js"></script>
+    <script src="./src-min/ext-language_tools.js"></script>
+
+    <script src="./code.js"></script>
+    <script src="./console.js"></script>
+</body>
+
+</html>
